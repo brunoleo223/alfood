@@ -28,6 +28,8 @@ const ListaRestaurantes = () => {
       .catch(err => console.log(err));
   }
 
+  console.log(restaurantes);
+
   return (<section className={style.ListaRestaurantes}>
     <h1>Os restaurantes mais <em>bacanas</em>!</h1>
     {restaurantes?.map(item => <Restaurante restaurante={item} key={item.id} />)}
