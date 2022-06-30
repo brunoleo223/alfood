@@ -17,7 +17,7 @@ const Restaurante = ({ restaurante }: RestauranteProps) => {
     axios.get(`http://localhost:8000/api/v1/restaurantes/${restaurante.id}/pratos/
     `).then(response => setPratos(response.data))
     .catch(err => console.log(err));
-  }, [])
+  }, [restaurante.id])
 
   return (<section className={estilos.Restaurante}>
     <div className={estilos.Titulo}>
